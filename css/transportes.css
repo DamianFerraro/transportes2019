@@ -1,0 +1,353 @@
+/*font-family: 'Open Sans', sans-serif;*/
+body{
+	font-size: 16px; /*este será el valor del em*/
+	line-height: 20px;
+	font-family: 'Open Sans', sans-serif; /*se pone la fuente en el body porque en este caso casi todo el sitio va a trabajar 
+	con la misma fuente. Las comillas simples son para que lo que está separado por un espacio se tome como algo que está todo
+	junto, es para nombres de dos palabras. Sans-serif es una fuente similar de backup por fuer
+	a de google fonts por si la primera no se puede cargar*/
+}
+
+header{
+	background-color: #2e64a1;
+	padding: 1em 0;
+}
+
+header h1{
+	color: white;
+	font-size: 2.5em;
+	font-style: italic;
+	font-weight: 100;
+	display: inline-block; /*para que se alinee con el logo,es como una especie de float*/
+	position: relative; /*para serpararlo del piso, donde cae naturalmente*/
+	bottom: 0.8em; /*cuánto sube desde el fondo*/
+	margin-left: 0.3em;	/*para separar la palabra del logo*/
+}
+
+nav{
+	background-color:  #6da9ed;
+	margin-bottom: 2em;
+}
+
+nav ul{
+	list-style-type: none; /*sacar puntos*/
+	margin: 0; /*sacar margen*/
+	padding: 0; /*sacar padding*/
+
+}
+
+nav ul li{
+	display: inline-block; /*todos al mismo nivel*/
+	width: 20%; /*es una fotma de centrar, ya que hay 5 elementos, 100/5 =20, pegar los li unos con otros en el html para evitar 
+	saltos de línea*/
+}
+
+nav ul li a{
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding: 0.2em 0.4 em;
+	display: block; /*hay elementos que toman solo la palabra, esto es para que tome todo e 
+	interprete el espacio como un sólo elemento, un botón*/
+
+}
+
+nav ul li a:hover{
+	background-color: rgba(0,0,0,0.3); /*0,0,0 es negro y con la transparencia se hace que parezca un poco más oscuro*/
+}
+
+nav ul li a.activo{  /*.activo va pegado a la a para que sea hijo directo, si no no lo encuentra porque hay muchas a*/
+	background-color: #4c76a5;
+}
+
+footer{
+	background-color: #ccc;
+	color: #333;
+	font-size: 0.7em;
+	font-style: italic;
+	text-align: center;
+	padding: 3em 0;
+	margin-top: 2em;
+	clear: both;
+}
+
+.holder{  /*crea una clase para centrar los elementos que van en el medio y no de punta a punta, después ve a qué la aplica*/
+	width: 960px;
+	margin: 0 auto;
+
+}
+
+h2{
+	font-weight: 400;
+	color: #2e64a1;
+	margin: 0 0 1em; /*arriba, laterales, abajo*/
+}
+
+
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+/*inicio home*/
+
+.homeimg{
+	clear: both;
+	margin-bottom: 1.5em;
+}
+
+.bienvenidos{
+	width: 75%;
+	padding: 1em;
+	/*background-color: red;*/
+}
+.testimonios{
+	width: 25%;
+	padding: 1em;
+	/*background-color: blue;*/
+}
+
+.bienvenidos, .testimonios{  /*un atributo igual para ambas clases. La coma significa que los dos elementos
+	tienen el mismo atributo*/
+	box-sizing: border-box; /*resuelve el tamaño de la caja, bloquea la proporción entre elementos
+	 para que el padding no aumente el tamaño, te ahorra la matemática*/
+}
+
+.bienvenidos p{
+	font-size: 1em;
+}
+
+
+.testimonio{
+	background-color: #ddd;
+	padding: 1em;
+	
+}
+
+.testimonio .cita{
+	color: black;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1.4em;
+	display: block; /*para que esté en otro nivel que el autor*/
+
+}
+
+.testimonio .autor{
+	font-size: 0.7em;
+	text-align: center;
+	margin: 1em 0;
+	display: block; /*para que esté en otro nivel que la cita, para que esté en bloque*/
+}
+/*fin home*/
+
+/*inicio nosotros*/
+
+.historia{
+	font-size: 0.8em;
+}
+
+.persona{
+	width: 18%;
+	float: left;
+	margin-left: 2.25%;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	border-radius: 0.25em;
+
+}
+
+.persona figure{ /*para arreglarle los márgenes*/
+	margin: 0.8em 0 1em;
+	text-align: center;
+
+}
+
+.persona figure img{
+	border-radius: 50%; /*50% es un circulo*/
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);/* 5px es desenfoque*/
+}
+
+.persona h5,
+.persona h6{
+	text-align: center;
+	font-weight: normal;
+	color: #2e64a1;
+	margin:0;
+}
+
+.persona h5{
+	font-size: 0.9em;
+}
+.persona h6{
+	font-size: 0.8em;
+	font-style: italic;
+	margin-bottom: 1em;
+}
+
+.persona p{
+	font-size: 0.7em;
+	margin: 0 1em 1em;
+	color: #444;
+}
+
+.persona:first-child{ /*pseudo clase first-child dice que el primer elemento de la clase tiene tal atributo, 
+	también hay last-child*/
+	margin-left: 0;
+}
+
+
+/*fin nosotros*/
+
+/*inicio servicios*/
+
+.servicio{
+	border: 1px solid #ddd;
+	border-radius: 0.7em;
+	margin: 1em 0;
+	box-sizing: border-box;
+	padding: 1em;
+	overflow: hidden; /*para que se acomoden las líneas, aunque diga ocultar muestra todos los elementos para formar
+	el alto de caja. En algunos casos oculta y en otros muestra. */
+}
+
+.servicio figure{
+	display:inline-block;
+}
+
+.servicio figure img{
+	border-radius: 0.8em;
+}
+
+.servicio .info{
+	width: 75%;
+}
+
+.servicio .info h4{
+	font-size:1.2em;
+	font-style: italic;
+	color: #2e64a1;
+	font-weight: 500;
+	margin: 0 0 1em;
+	border-bottom: 1px solid #2e64a1;
+	padding-bottom: 0.5em; 
+}
+
+.servicio:nth-child(odd) figure{   /*impar. Esto afecta a los elementos que están en los lugares
+	pares o en los lugares impares. En los hijos impares la imagen está a la izquierda, pero los hijos empiezan desde el 0,
+	ásí que el primer hijo sería par*/
+	float:left;
+	margin: 0 1em 0 0; /*el margen cambia según si es par o impar, acá va margen a la derecha*/
+}
+
+.servicio:nth-child(odd) .info{
+	float: right;
+}
+
+.servicio:nth-child(even) figure{
+	float:right;
+	margin: 0 0 0 1em; /*el margen cambia según si es par o impar, acá va margen a la izquierda*/
+}
+
+.servicio:nth-child(even) .info{
+	float: left;
+}
+
+
+.servicio .info p{
+
+}
+
+
+/*fin servicios*/
+
+/*inicio galería*/
+
+.galeria .foto{
+	float: left;
+	width: 18%;
+	margin: 1em 0 1em 2.5%;
+	border: 1px solid #ddd; /*#ddd*/
+	padding: 0.3em;
+	box-sizing: border-box;
+
+}
+
+.galeria .foto img{
+	width: 100%; /*para que se ajuste al ancho de caja, si la diferencia no es mucha porque si no puede pixelar*/
+	display: block; /*para que agarre bien la cajita*/
+}
+
+.galeria .foto:nth-child(5n+1){ /*el primero de cada 5 elementos se le elimina el margen, o le pasa algo*/
+	border-color:#ddd;
+	margin-left: 0;
+}
+
+
+/*fin galería*/
+
+/*inicio contacto*/
+
+.columna{
+	width: 50%;
+	padding: 0 0.7em;
+	box-sizing: border-box;
+
+}
+
+.columna.left{ /*cuando el div tiene dos clases estos van pegados*/
+	border-right: 1px solid #ddd;
+}
+
+.columna.right p{
+	font-size: 0.8em;
+}
+
+.columna.right ul li{
+	font-size: 0.8em;
+}
+
+.formulario label{
+	vertical-align: top;
+	width: 16%;
+	background-color: red;
+	display:inline-block;
+
+}
+
+.formulario input,
+.formulario textarea{
+	background-color: #ddd;
+	border-radius: 5px;
+	border: 1px solid #999;
+	font-size: 0.8em;
+	padding: 0.4em 0,6em;
+	width: 80%;
+}
+
+.formulario textarea{
+	height: 10em;
+	resize: none; /*sacar la posibilidad de agrandar y achicar la caja por el usuario*/
+}
+
+.formulario input[type="submit"]{  /*en los corchetes se puede poner una información adentro,
+Es como que si se quiere especificar un atributo hay que usar corchetes dentro de la clase hay que usar 
+corchetes. "cuando el botón es del tipo tanto 
+va tener este estilo"*/
+	background-color: #6da9ed;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	color: white;
+	font-size: 1em;
+	padding: 0.4em 0.2em;
+	text-align: center;
+	width: auto;
+}
+
+.formulario .acciones{ /*acá no va todo junto porque las class están en distintos niveles*/
+ 	text-align: center;
+ }
+/*fin contacto*/
